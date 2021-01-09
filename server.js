@@ -38,7 +38,7 @@ app.get("/api/rates", (req, res) => {
         }
         res.status(200).json(result);
       }
-      else res.status(400).json({error});
+      else res.status(400).json({error:"Null data, enter input parameters correctly"});
     })
 })
 

@@ -29,6 +29,7 @@ currencyList.onchange = (e) => {
     chosenCurrencies.insertAdjacentHTML("beforeend", `
     <span class='currency-btn'>${value},</span>
     `)
+    currencyList.value = ""
 }
 
 const form = document.getElementById("input-form");
@@ -46,6 +47,9 @@ form.onsubmit = (e) => {
         const res = await fetch(url);
         const data = await res.json();
         console.log(data)
+        if (data.error){
+            return success.innerHTML = data.error;
+        }
         let html = `
         <p><strong>Base: </strong>${data.results.base}</p>
         <p><strong>Date: </strong>${data.results.date}</p>
