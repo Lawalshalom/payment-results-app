@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=`, initial-scale=1.0" />
+		<title>Currency Rates Checker</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Currency Rates</h1>
+		<h3>Enter currencies to compare</h3>
+		<main>
+			<form id="input-form" class="flex-column">
+				<select name="base" id="base" required>
+					<option value="">Choose Base Currency</option>
+				</select>
+
+				<select name="currencies" id="currencies" required>
+					<option value="">Select Currencies</option>
+				</select>
+				<div id="chosenCurrencies"></div>
+
+				<button type="submit">Submit</button>
+			</form>
+			<div id="success-div" class="flex-column"></div>
+		</main>
+	</body>
+	<script type="module" src="index.js"></script>
+</html>

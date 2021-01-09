@@ -1,0 +1,41 @@
+h1,
+h3 {
+	text-align: center;
+	margin-top: 30px;
+}
+.flex-column {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+#success-div {
+	text-align: center;
+}
+select,
+button {
+	align-self: center;
+	padding: 10px;
+	margin: 10px;
+}
+select:focus {
+	outline: none;
+}
+
+#chosenCurrencies {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: max-content;
+	padding: 0 10px;
+	height: 40px;
+	margin: auto;
+	border: 2px solid black;
+}
+#chosenCurrencies span {
+	margin-right: 10px;
+}
+#chosenCurrencies:empty::after {
+	content: "Currencies to compare";
+	opacity: 0.5;
+	margin: auto;
+}
