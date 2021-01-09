@@ -40,7 +40,7 @@ form.onsubmit = (e) => {
     const base = formData.get("base");
     const currency = chosenCurrencies.innerText.slice(0, chosenCurrencies.innerText.length-1)
 
-    const url = `http://localhost:7890/api/rates?base=${base}&currency=${currency}`;
+    const url = `https://currency-rates-checker.herokuapp.com/api/rates?base=${base}&currency=${currency}`;
 
     async function submitData(url){
         const res = await fetch(url);
