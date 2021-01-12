@@ -23,6 +23,23 @@ const Records = (props) => {
     return setSortDetails(newState);
   });
 
+  useEffect(() => {
+    const userDiv = document.getElementById("users");
+    const showUser = document.getElementById("show-user");
+    const showUserDiv = document.querySelector(".show-user");
+    if (showUser) {
+        userDiv.style.opacity = 0.3;
+        showUser.style.opacity = 1;
+
+        document.body.onclick = (e) => {
+            if (e.path.indexOf(showUserDiv) === -1){
+                setShowUser(null);
+            }
+        }
+    }
+    else userDiv.style.opacity = 1;
+  });
+
   const pages = paginationArr(users);
   let length = pages.length;
   if (pages[length-1] <= currentPage/20) handlePagination(1, setCurrentPage, pages);
