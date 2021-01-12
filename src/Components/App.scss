@@ -1,0 +1,151 @@
+$dark-yellow: #775d0e;
+$red: #f46036;
+$dark-red: #b74828;
+$blue: #2d7dd2;
+$dark-blue: #163f69;
+$black: #040d15;
+$gray: rgba(128, 128, 128, 0.637);
+
+.search-users {
+	margin-top: 2rem;
+	input {
+		width: 100%;
+		background: rgba($gray, 0.2);
+		border: none;
+		padding: 10px;
+		border-radius: 5px;
+	}
+	p {
+		margin-top: -35px;
+		padding-right: 10px;
+		button {
+			border: none;
+			z-index: 9;
+			background: transparent;
+		}
+	}
+}
+
+.sort-users {
+	margin-top: 2rem;
+	border-radius: 5px;
+	padding: 5px;
+	border-top: 2px solid rgba($gray, 0.2);
+
+	button {
+		color: $blue;
+		&:focus {
+			box-shadow: none;
+			outline: none;
+		}
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+.display-users {
+	margin-top: 2rem;
+	table {
+		width: 100%;
+		th,
+		td {
+			text-align: center;
+			border: 1px solid $black;
+		}
+	}
+}
+
+.dropdown {
+	button {
+		text-transform: capitalize;
+	}
+	.dropdown-menu.show {
+		border: none !important;
+		text-align: right;
+		transform: translate3d(-45px, 24px, 0px) !important;
+		background-color: #fff;
+
+		.dropdown-item {
+			color: $blue !important;
+		}
+	}
+}
+.dropdown-item:active {
+	background-color: #fff !important;
+}
+.dropdown-menu.show.translate {
+	transform: translate3d(15px, 24px, 0px) !important;
+}
+
+.pagination {
+	margin-left: 2rem;
+	border-radius: 10px;
+	.page-link {
+		margin: 0 5px;
+		border-radius: 10px !important;
+		color: #000;
+	}
+	button:focus {
+		box-shadow: none;
+	}
+	.page-item.active {
+		.page-link {
+			color: #fff;
+			background-color: rgba($gray, 0.5);
+			border: none;
+		}
+	}
+}
+
+.show-details-btn {
+	color: $blue;
+}
+
+#show-user {
+	top: 3rem;
+	width: 100vw;
+	position: fixed;
+	left: 0;
+	background: transparent;
+	z-index: 99;
+
+	.show-user {
+		background: #fff;
+		padding: 2rem 5rem;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.dropdown .dropdown-menu.show {
+		text-align: left;
+		transform: translate3d(-15px, 45px, 0px) !important;
+	}
+	#show-user .show-user {
+		padding: 10px;
+	}
+}
+
+#loading-div {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border-bottom: 2px dashed $red;
+	border-right: 3px dashed $red;
+	margin: 20px;
+	animation: spin 1s linear infinite;
+	animation-fill-mode: forwards;
+	animation-timing-function: steps(20);
+	display: none;
+}
+#info-div {
+	display: none;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
