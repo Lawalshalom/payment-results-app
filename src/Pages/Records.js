@@ -29,7 +29,10 @@ const Records = (props) => {
 
   return (
     <div className="container-md">
-      <h1 className="text-center mt-4" data-aos="fade">Payment Records</h1>
+        <img src="https://res.cloudinary.com/lawfirm1000/image/upload/v1610489232/556x300_rub9bw.png" alt="enye-logo" height="100px"/>
+      <h1 className="text-center" data-aos="fade">
+        <span>Payment Records</span>
+      </h1>
 
 
       <div className="users" id="users" data-aos="fade-up">
